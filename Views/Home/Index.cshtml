@@ -1,0 +1,47 @@
+﻿@model NashGrub.Models.DTOs.HashtagsReviewsDTO
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="main-container">
+        <div class="form-container">
+            <h1 class="main-heading"><span class="caps">NASH</span><span class="grub">grub</span></h1>
+            <p class="food-feedback">Feedback for Food.</p>
+            <div class="text-btn-container">
+                <textarea class="textarea"
+                    placeholder="Enter your feedback here, remember to #hashtag the company..."></textarea>
+                <button class="submit-btn">Submit</button>
+            </div>
+        </div>
+
+        <div class="list-container">
+            @foreach (Review review in Model.Reviews)
+            {
+                <li class="review-list-item-background">
+                    <div class="business-icon">
+                        <p class="initial">@review.Hashtag.BusinessName.Substring(0, 1)</p>
+                    </div>
+                    <div class="review-list-item">
+                        <p class="business-name">@review.Hashtag.BusinessName.ToUpper()</p>
+                        <p class="business-message">@review.Message</p>
+                    </div>
+                    <p>@(review.DaysSincePosted)d</p>
+                </li>
+            }
+        </div>
+
+
+
+    </div>
+
+    <div class="aside-container">
+        <ul class="business-aside">
+            @foreach (Hashtag hashtag in Model.Hashtags)
+            {
+                <li class="buisness-name-hashtag">#@hashtag.BusinessName.ToLower()</li>
+            }
+        </ul>
+    </div>
+</div>
