@@ -17,7 +17,7 @@ namespace NashGrub.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -31,7 +31,6 @@ namespace NashGrub.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BusinessName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -42,22 +41,22 @@ namespace NashGrub.Migrations
                         new
                         {
                             Id = 1,
-                            BusinessName = "3rd and Lindsley"
+                            BusinessName = "3rdandlindsley"
                         },
                         new
                         {
                             Id = 2,
-                            BusinessName = "Hattie B's Hot Chicken"
+                            BusinessName = "hattieb'shotchicken"
                         },
                         new
                         {
                             Id = 3,
-                            BusinessName = "Loveless Cafe"
+                            BusinessName = "lovelesscafe"
                         },
                         new
                         {
                             Id = 4,
-                            BusinessName = "Pancake Pantry"
+                            BusinessName = "pancakepantry"
                         });
                 });
 
@@ -76,7 +75,6 @@ namespace NashGrub.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("Message")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -89,30 +87,30 @@ namespace NashGrub.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2777),
+                            DateCreated = new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9240),
                             HashtagId = 1,
-                            Message = "The service was attentive and friendly, adding to the overall wonderful dining experience."
+                            Message = "the service at #3rdandlindsley was attentive and friendly, adding to the overall wonderful dining experience."
                         },
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2833),
+                            DateCreated = new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9293),
                             HashtagId = 2,
-                            Message = "he casual atmosphere makes it a great spot for a laid-back meal with family or friends. Just be prepared to leave with a satisfied belly and a newfound love for barbecue!"
+                            Message = "the casual atmosphere at #hattieb'shotchicken makes it a great spot for a laid-back meal with family or friends. just be prepared to leave with a satisfied belly and a newfound love for barbecue!"
                         },
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2835),
+                            DateCreated = new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9295),
                             HashtagId = 3,
-                            Message = "The tranquil ambiance adds to the overall dining experience, making it a great place to unwind after a long day."
+                            Message = "the tranquil ambiance at #lovelesscafe adds to the overall dining experience, making it a great place to unwind after a long day."
                         },
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2837),
+                            DateCreated = new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9297),
                             HashtagId = 4,
-                            Message = "The staff is always friendly and accommodating, adding to the welcoming atmosphere of the restaurant."
+                            Message = "the staff at #pancakepantry is always friendly and accommodating, adding to the welcoming atmosphere of the restaurant."
                         });
                 });
 

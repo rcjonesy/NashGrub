@@ -21,6 +21,7 @@
 
 .main-heading[b-m1n89xd0az] {
   font-size: 64px;
+  
 }
 
 .main-container[b-m1n89xd0az] {
@@ -56,8 +57,9 @@
 }
 
 .list-container[b-m1n89xd0az] {
+  height: 500;
   border-radius: 5px;
-  overflow: hidden;
+  overflow-y: scroll;
   background-color: white;
   list-style-type: none;
 }

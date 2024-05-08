@@ -20,7 +20,7 @@ namespace NashGrub.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    BusinessName = table.Column<string>(type: "text", nullable: false)
+                    BusinessName = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -33,7 +33,7 @@ namespace NashGrub.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Message = table.Column<string>(type: "text", nullable: false),
+                    Message = table.Column<string>(type: "text", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     HashtagId = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -53,10 +53,10 @@ namespace NashGrub.Migrations
                 columns: new[] { "Id", "BusinessName" },
                 values: new object[,]
                 {
-                    { 1, "3rd and Lindsley" },
-                    { 2, "Hattie B's Hot Chicken" },
-                    { 3, "Loveless Cafe" },
-                    { 4, "Pancake Pantry" }
+                    { 1, "3rdandlindsley" },
+                    { 2, "hattieb'shotchicken" },
+                    { 3, "lovelesscafe" },
+                    { 4, "pancakepantry" }
                 });
 
             migrationBuilder.InsertData(
@@ -64,10 +64,10 @@ namespace NashGrub.Migrations
                 columns: new[] { "Id", "DateCreated", "HashtagId", "Message" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2777), 1, "The service was attentive and friendly, adding to the overall wonderful dining experience." },
-                    { 2, new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2833), 2, "he casual atmosphere makes it a great spot for a laid-back meal with family or friends. Just be prepared to leave with a satisfied belly and a newfound love for barbecue!" },
-                    { 3, new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2835), 3, "The tranquil ambiance adds to the overall dining experience, making it a great place to unwind after a long day." },
-                    { 4, new DateTime(2024, 4, 25, 10, 54, 40, 101, DateTimeKind.Local).AddTicks(2837), 4, "The staff is always friendly and accommodating, adding to the welcoming atmosphere of the restaurant." }
+                    { 1, new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9240), 1, "the service at #3rdandlindsley was attentive and friendly, adding to the overall wonderful dining experience." },
+                    { 2, new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9293), 2, "the casual atmosphere at #hattieb'shotchicken makes it a great spot for a laid-back meal with family or friends. just be prepared to leave with a satisfied belly and a newfound love for barbecue!" },
+                    { 3, new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9295), 3, "the tranquil ambiance at #lovelesscafe adds to the overall dining experience, making it a great place to unwind after a long day." },
+                    { 4, new DateTime(2024, 5, 8, 15, 40, 42, 99, DateTimeKind.Local).AddTicks(9297), 4, "the staff at #pancakepantry is always friendly and accommodating, adding to the welcoming atmosphere of the restaurant." }
                 });
 
             migrationBuilder.CreateIndex(

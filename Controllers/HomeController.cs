@@ -4,6 +4,8 @@ using NashGrub.Models;
 using NashGrub.Models.DTOs;
 using NashGrub.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
+
 
 
 
@@ -36,10 +38,34 @@ public class HomeController : Controller
 
         Console.WriteLine(hashtagsReviews);
 
-        
+
         return View(hashtagsReviews);
-        
+
 
     }
+    [HttpPost]
+    public ActionResult Index(HashtagsReviewsDTO hashtagsReviews)
+    {
+        // pattern to check hashtag
+        string pattern = @"#(\w+) ";
+        // original message
+        string? message = hashtagsReviews.Review?.Message.ToLower();
+        // extracted hashtag
+        string hashtagWithHash = Regex.Match(hashtagsReviews.Review.Message, pattern).Value;
+        string hashtag = Regex.Replace(hashtagWithHash, "#", "");
 
+        Review newReviewObj = new()
+        {
+            DateCreated = DateTime.Now,
+            Message = message,
+            Hashtag = new()
+            {
+                BusinessName = hashtag.ToLower()
+            }
+        };
+
+        _context.Add(newReviewObj);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }
 }

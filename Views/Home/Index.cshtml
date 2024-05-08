@@ -1,5 +1,6 @@
 ﻿@model NashGrub.Models.DTOs.HashtagsReviewsDTO
 
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -9,11 +10,14 @@
         <div class="form-container">
             <h1 class="main-heading"><span class="caps">NASH</span><span class="grub">grub</span></h1>
             <p class="food-feedback">Feedback for Food.</p>
-            <div class="text-btn-container">
-                <textarea class="textarea"
-                    placeholder="Enter your feedback here, remember to #hashtag the company..."></textarea>
-                <button class="submit-btn">Submit</button>
-            </div>
+            <form asp-action="Index">
+                <div class="text-btn-container">
+                    <label asp-for="Review.Message"></label>
+                    <textarea asp-for="Review.Message" class="textarea"
+                        placeholder="Enter your feedback here, remember to #hashtag the company..."></textarea>
+                    <button class="submit-btn">Submit</button>
+                </div>
+            </form>
         </div>
 
         <div class="list-container">

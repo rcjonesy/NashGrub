@@ -21,6 +21,7 @@
 
 .main-heading {
   font-size: 64px;
+  
 }
 
 .main-container {
@@ -56,8 +57,9 @@
 }
 
 .list-container {
+  height: 500;
   border-radius: 5px;
-  overflow: hidden;
+  overflow-y: scroll;
   background-color: white;
   list-style-type: none;
 }
