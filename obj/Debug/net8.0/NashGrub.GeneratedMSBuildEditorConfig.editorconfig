@@ -17,55 +17,55 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NashGrub
 build_property.RootNamespace = NashGrub
-build_property.ProjectDir = C:\Users\ryanc\workspace\NashGrub\
+build_property.ProjectDir = /Users/edwin.moz/workspace/csharp/NashGrub/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ryanc\workspace\NashGrub
+build_property.MSBuildProjectDirectory = /Users/edwin.moz/workspace/csharp/NashGrub
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Hashtag/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzaHRhZ1xDcmVhdGUuY3NodG1s
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Hashtag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGFzaHRhZy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Hashtag/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzaHRhZ1xEZWxldGUuY3NodG1s
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Hashtag/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGFzaHRhZy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Hashtag/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzaHRhZ1xEZXRhaWxzLmNzaHRtbA==
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Hashtag/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGFzaHRhZy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Hashtag/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzaHRhZ1xFZGl0LmNzaHRtbA==
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Hashtag/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGFzaHRhZy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Hashtag/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzaHRhZ1xJbmRleC5jc2h0bWw=
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Hashtag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGFzaHRhZy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-m1n89xd0az
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-vmktas2ncg
 
-[C:/Users/ryanc/workspace/NashGrub/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-4uouluipz1
+[/Users/edwin.moz/workspace/csharp/NashGrub/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5cjh3f5vnu

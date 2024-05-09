@@ -7933,19 +7933,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ryanc\\.nuget\\packages\\": {}
+    "/Users/edwin.moz/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ryanc\\workspace\\NashGrub\\NashGrub.csproj",
+      "projectUniqueName": "/Users/edwin.moz/workspace/csharp/NashGrub/NashGrub.csproj",
       "projectName": "NashGrub",
-      "projectPath": "C:\\Users\\ryanc\\workspace\\NashGrub\\NashGrub.csproj",
-      "packagesPath": "C:\\Users\\ryanc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ryanc\\workspace\\NashGrub\\obj\\",
+      "projectPath": "/Users/edwin.moz/workspace/csharp/NashGrub/NashGrub.csproj",
+      "packagesPath": "/Users/edwin.moz/.nuget/packages/",
+      "outputPath": "/Users/edwin.moz/workspace/csharp/NashGrub/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ryanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/edwin.moz/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -8022,7 +8022,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

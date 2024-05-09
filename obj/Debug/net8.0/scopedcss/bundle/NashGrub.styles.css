@@ -1,36 +1,36 @@
 /* _content/NashGrub/Views/Home/Index.cshtml.rz.scp.css */
 /* Define a class for the container */
-.container[b-m1n89xd0az] {
+.container[b-vmktas2ncg] {
   display: flex;
   justify-content: center;
 }
 
-.caps[b-m1n89xd0az] {
+.caps[b-vmktas2ncg] {
   font-weight: bold;
   color: rgb(255, 255, 255);
   letter-spacing: 3px;
 }
 
-.grub[b-m1n89xd0az] {
-  font-size: 50px;
+.grub[b-vmktas2ncg] {
+  font-size: 40px;
 }
 /* Style for the business-aside class */
-.business-aside[b-m1n89xd0az] {
+.business-aside[b-vmktas2ncg] {
   color: white;
   list-style-type: none;
 }
 
-.main-heading[b-m1n89xd0az] {
+.main-heading[b-vmktas2ncg] {
   font-size: 64px;
   
 }
 
-.main-container[b-m1n89xd0az] {
+.main-container[b-vmktas2ncg] {
   height: 90vh;
   width: 800px;
 }
 
-.form-container[b-m1n89xd0az] {
+.form-container[b-vmktas2ncg] {
   display: flex;
   flex-direction: column;
   background-color: rgb(57, 56, 56, 0);
@@ -39,7 +39,7 @@
   padding: 50px;
 }
 
-.text-btn-container[b-m1n89xd0az] {
+.text-btn-container[b-vmktas2ncg] {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,11 +53,11 @@
   transition: box-shadow 0.3s; /* Transitioning box-shadow property */
 }
 
-.text-btn-container:hover[b-m1n89xd0az] {
+.text-btn-container:hover[b-vmktas2ncg] {
   box-shadow: 0 0 0 5px rgb(255, 255, 255); /* Changing the shadow to create a border effect */
 }
 
-.list-container[b-m1n89xd0az] {
+.list-container[b-vmktas2ncg] {
   height: 500;
   border-radius: 5px;
   overflow-y: scroll;
@@ -65,7 +65,7 @@
   list-style-type: none;
 }
 
-.textarea[b-m1n89xd0az] {
+.textarea[b-vmktas2ncg] {
   background-color: white;
   color: rgb(0, 0, 0);
   resize: none;
@@ -73,12 +73,12 @@
   outline: none;
 }
 
-.textarea[b-m1n89xd0az]::placeholder {
+.textarea[b-vmktas2ncg]::placeholder {
   color: rgb(59, 59, 59);
   font-size: 15px;
 }
 
-.submit-btn[b-m1n89xd0az] {
+.submit-btn[b-vmktas2ncg] {
   background-color: #0f5c82;
   color: white;
   border-radius: 100px;
@@ -88,12 +88,12 @@
   text-transform: uppercase;
 }
 
-.submit-btn:hover[b-m1n89xd0az] {
+.submit-btn:hover[b-vmktas2ncg] {
   scale: 110%;
   transition: 0.2s;
 }
 
-.review-list-item-background[b-m1n89xd0az] {
+.review-list-item-background[b-vmktas2ncg] {
   background-color: white;
   border-bottom: 1px solid rgb(191, 187, 187);
   border-bottom-color: gray;
@@ -104,7 +104,7 @@
   padding: 5px 30px;
 }
 
-.review-list-item[b-m1n89xd0az] {
+.review-list-item[b-vmktas2ncg] {
   background-color: rgb(255, 255, 255);
   transition: transform 0.2s, background-color 0.2s;
   /* padding: 10px; */
@@ -120,12 +120,12 @@
   justify-content: center;
 }
 
-.review-list-item:hover[b-m1n89xd0az] {
+.review-list-item:hover[b-vmktas2ncg] {
   transform: translateX(5px);
   background-color: white;
 }
 
-.business-icon[b-m1n89xd0az] {
+.business-icon[b-vmktas2ncg] {
   font-size: 40px;
   background-color: rgb(34, 34, 34);
   border-radius: 50%;
@@ -134,22 +134,22 @@
   text-align: center;
 }
 
-.business-name[b-m1n89xd0az] {
+.business-name[b-vmktas2ncg] {
   font-weight: bold;
   letter-spacing: -0.7px;
   opacity: 50%;
   margin-bottom: 5px;
 }
 
-.business-message[b-m1n89xd0az] {
+.business-message[b-vmktas2ncg] {
   letter-spacing: -0.7px;
 }
 
-.text-btn-container[b-m1n89xd0az] {
+.text-btn-container[b-vmktas2ncg] {
   background-color: white;
 }
 
-.buisness-name-hashtag[b-m1n89xd0az] {
+.buisness-name-hashtag[b-vmktas2ncg] {
   background-color: rgb(255, 255, 255, 0.3);
   margin: 10px;
   padding: 8px 8px;
@@ -158,7 +158,7 @@
   font-size: 13px;
 }
 
-.initial[b-m1n89xd0az] {
+.initial[b-vmktas2ncg] {
   color: white;
 }
 /* _content/NashGrub/Views/Shared/_Layout.cshtml.rz.scp.css */
