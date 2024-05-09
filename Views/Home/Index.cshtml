@@ -1,51 +1,52 @@
 ﻿@model NashGrub.Models.DTOs.HashtagsReviewsDTO
 
 
-@{
-    ViewData["Title"] = "Home Page";
-}
+
 
 <div class="container">
-    <div class="main-container">
+    <div>
         <div class="form-container">
             <h1 class="main-heading"><span class="caps">NASH</span><span class="grub">grub</span></h1>
-            <p class="food-feedback">Feedback for Food.</p>
+            <p class="food-feedback-heading">Feedback for Food.</p> <!--  this has no styling -->
+            @* form submission in html use post by default *@
             <form asp-action="Index">
-                <div class="text-btn-container">
-                    <label asp-for="Review.Message"></label>
-                    <textarea asp-for="Review.Message" class="textarea"
+                <div class="form-style">
+                    @* <label asp-for="Review.Message"></label> *@
+                    <textarea asp-for="Review.Message" class="area-for-text"
                         placeholder="Enter your feedback here, remember to #hashtag the company..."></textarea>
                     <button class="submit-btn">Submit</button>
                 </div>
             </form>
         </div>
 
-        <div class="list-container">
+        <ul class="list-container">
             @foreach (Review review in Model.Reviews)
             {
                 <li class="review-list-item-background">
-                    <div class="business-icon">
-                        <p class="initial">@review.Hashtag.BusinessName.Substring(0, 1)</p>
+                    <div class="li_styles">
+                        <div class="business-icon">
+                            <p class="initial">@review.Hashtag.BusinessName.Substring(0, 1)</p>
+                        </div>
+                        <div class="review-list-item">
+                            <p class="business-name">@review.Hashtag.BusinessName.ToUpper()</p>
+                            <p class="business-message">@review.Message</p>
+                        </div>
+                        <p class="days_styling">@(review.DaysSincePosted)d</p>
                     </div>
-                    <div class="review-list-item">
-                        <p class="business-name">@review.Hashtag.BusinessName.ToUpper()</p>
-                        <p class="business-message">@review.Message</p>
-                    </div>
-                    <p>@(review.DaysSincePosted)d</p>
                 </li>
             }
-        </div>
+        </ul>
 
 
 
     </div>
 
-    <div class="aside-container">
+    <aside>
         <ul class="business-aside">
             @foreach (Hashtag hashtag in Model.Hashtags)
             {
-                <li class="buisness-name-hashtag">#@hashtag.BusinessName.ToLower()</li>
+                <li class="business-name-hashtag">#@hashtag.BusinessName.ToLower()</li>
             }
         </ul>
-    </div>
+</div>
 </div>

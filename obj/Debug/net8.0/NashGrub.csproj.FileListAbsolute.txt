@@ -20,7 +20,6 @@ C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\staticwebassets\msbuild.build
 C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NashGrub.props
 C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NashGrub.props
 C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\scopedcss\bundle\NashGrub.styles.css
 C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\scopedcss\projectbundle\NashGrub.bundle.scp.css
 C:\Users\ryanc\workspace\NashGrub\obj\Debug\net8.0\NashGrub.dll
