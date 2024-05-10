@@ -2,19 +2,192 @@
 
 * {
   font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   min-height: 100vh;
   background: linear-gradient(to bottom, #022536, #0c3b59);
-  /* background-size: cover; */
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  color: white;
+  width: 100%;
 }
 
-footer {
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  width: 800px;
+  height: full;
+}
+
+/* use this for padding if needed */
+.main-content-header {
+  text-align: center;
+  width: full;
+}
+
+.heading {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.heading-span {
+  font-size: 50px;
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+}
+
+.form-layout {
+  background-color: white;
+  border: 3px solid #0c3b59;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  width: 500px;
+}
+
+.form-layout:focus-within {
+  border: 3px solid #0c3b59;
+  outline: 5px solid rgb(138, 138, 204);
+}
+
+.text-area-styling {
+  border: none;
+  outline: none;
+  padding: 5px;
+  resize: none;
+}
+
+.text-area-styling::placeholder {
+  color: gray;
+}
+
+.form-submit-btn {
+  background-color: #0c3b59;
+  border: none;
+  color: white;
+  margin-left: auto;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+.form-submit-btn:hover {
+  opacity: 90%;
+}
+
+.review-list {
+  background-color: white;
+  border-radius: 5px;
   color: black;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  list-style: none;
+  overflow-x: scroll;
+  padding: 0;
+}
+
+.review-item {
+  align-items: center;
+  border-bottom: 1px solid gray;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto 1fr auto;
+  max-height: 100px;
+  min-height: 100px;
+  padding: 0px 20px 0px 20px;
+}
+
+.review-item:hover {
+  background-color: gray;
+}
+
+.business-icon-background {
+  background-color: black;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-icon {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.review-detail {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.review-business-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.review-description {
+  margin: 0;
+  text-overflow: ellipsis;
+}
+
+.review-date {
+  margin: 0;
+}
+
+.hashtag-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.hashtag-item {
+  background-color: #0c3b59;
+  border-radius: 50px;
+  margin: 0;
+  opacity: 70%;
+  padding: 10px;
+  text-align: center;
+}
+
+.hashtag-item:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.hashtag {
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 800px;
+  height: full;
 }

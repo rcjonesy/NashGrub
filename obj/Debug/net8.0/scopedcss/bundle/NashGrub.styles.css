@@ -1,84 +1,40 @@
 /* _content/NashGrub/Views/Home/Index.cshtml.rz.scp.css */
 /* Define a class for the container */
-.container[b-m1n89xd0az] {
+.container[b-vmktas2ncg] {
   display: flex;
   justify-content: center;
+  max-height: 80%;
+  max-width: 1150px;
 }
 
-.caps[b-m1n89xd0az] {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  letter-spacing: 3px;
-}
-
-.grub[b-m1n89xd0az] {
-  font-size: 50px;
-}
-/* Style for the business-aside class */
-.business-aside[b-m1n89xd0az] {
-  color: white;
-  list-style-type: none;
-}
-
-.main-heading[b-m1n89xd0az] {
-  font-size: 64px;
-  
-}
-
-.main-container[b-m1n89xd0az] {
-  height: 90vh;
-  width: 800px;
-}
-
-.form-container[b-m1n89xd0az] {
+.form-container[b-vmktas2ncg] {
   display: flex;
   flex-direction: column;
   background-color: rgb(57, 56, 56, 0);
-  align-items: center;
   color: white;
+  /* padding: 50px; */
+  text-align: center;
+}
+
+.form-style[b-vmktas2ncg] {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 30px;
   padding: 50px;
 }
 
-.text-btn-container[b-m1n89xd0az] {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-  background-color: gray;
-  padding: 15px 25px; /* Combining padding declarations */
-  width: 500px;
-  border-radius: 5px;
-  margin-top: 50px;
-  border: 5px solid white;
-  transition: box-shadow 0.3s; /* Transitioning box-shadow property */
-}
-
-.text-btn-container:hover[b-m1n89xd0az] {
-  box-shadow: 0 0 0 5px rgb(255, 255, 255); /* Changing the shadow to create a border effect */
-}
-
-.list-container[b-m1n89xd0az] {
-  height: 500;
-  border-radius: 5px;
-  overflow-y: scroll;
-  background-color: white;
-  list-style-type: none;
-}
-
-.textarea[b-m1n89xd0az] {
-  background-color: white;
+.area-for-text[b-vmktas2ncg] {
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   resize: none;
-  border: none;
+  border: none !important;
+  text-decoration: none;
   outline: none;
+  width: 50px;
 }
 
-.textarea[b-m1n89xd0az]::placeholder {
-  color: rgb(59, 59, 59);
-  font-size: 15px;
-}
-
-.submit-btn[b-m1n89xd0az] {
+.submit-btn[b-vmktas2ncg] {
   background-color: #0f5c82;
   color: white;
   border-radius: 100px;
@@ -86,28 +42,103 @@
   border: none;
   padding: 2px 25px;
   text-transform: uppercase;
+  /* margin-bottom: 40px; */
 }
 
-.submit-btn:hover[b-m1n89xd0az] {
-  scale: 110%;
-  transition: 0.2s;
+.main-heading[b-vmktas2ncg] {
+  font-size: 64px;
 }
 
-.review-list-item-background[b-m1n89xd0az] {
+.list-container[b-vmktas2ncg] {
+  height: 500;
+  border-radius: 5px;
+  overflow-y: scroll;
   background-color: white;
+  height: 600px;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.review-list-item-background[b-vmktas2ncg] {
+  background-color: white;
+  list-style-type: none;
+
   border-bottom: 1px solid rgb(191, 187, 187);
   border-bottom-color: gray;
   display: flex;
-  justify-content: center;
+
   align-items: center;
   gap: 20px;
   padding: 5px 30px;
 }
 
-.review-list-item[b-m1n89xd0az] {
+.li_styles[b-vmktas2ncg] {
+  display: flex;
+  height: 100px;
+}
+
+.caps[b-vmktas2ncg] {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+}
+
+.grub[b-vmktas2ncg] {
+  font-size: 50px;
+}
+
+.business-aside[b-vmktas2ncg] {
+  color: white;
+  list-style-type: none;
+}
+
+.business-name-hashtag[b-vmktas2ncg] {
+  background-color: rgb(255, 255, 255, 0.3);
+  margin: 10px;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 13px;
+}
+
+.main-container[b-vmktas2ncg] {
+  height: 90vh;
+  width: 800px;
+}
+
+.text-btn-container[b-vmktas2ncg] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  background-color: gray;
+  padding: 15px 25px;
+  width: 500px;
+  border-radius: 5px;
+  margin-top: 50px;
+  border: 5px solid white;
+  transition: box-shadow 0.3s;
+}
+
+.text-btn-container:hover[b-vmktas2ncg] {
+  box-shadow: 0 0 0 5px rgb(255, 255, 255);
+}
+
+.textarea[b-vmktas2ncg]::placeholder {
+  color: rgb(59, 59, 59);
+  font-size: 15px;
+}
+
+.submit-btn:hover[b-vmktas2ncg] {
+  scale: 110%;
+  transition: 0.2s;
+}
+
+.review-list-item[b-vmktas2ncg] {
   background-color: rgb(255, 255, 255);
   transition: transform 0.2s, background-color 0.2s;
-  /* padding: 10px; */
+  padding: 10px;
   width: 95%;
   height: 100px;
   overflow: hidden;
@@ -120,12 +151,12 @@
   justify-content: center;
 }
 
-.review-list-item:hover[b-m1n89xd0az] {
+.review-list-item:hover[b-vmktas2ncg] {
   transform: translateX(5px);
   background-color: white;
 }
 
-.business-icon[b-m1n89xd0az] {
+.business-icon[b-vmktas2ncg] {
   font-size: 40px;
   background-color: rgb(34, 34, 34);
   border-radius: 50%;
@@ -134,33 +165,25 @@
   text-align: center;
 }
 
-.business-name[b-m1n89xd0az] {
+.business-name[b-vmktas2ncg] {
   font-weight: bold;
   letter-spacing: -0.7px;
   opacity: 50%;
   margin-bottom: 5px;
 }
 
-.business-message[b-m1n89xd0az] {
+.business-message[b-vmktas2ncg] {
   letter-spacing: -0.7px;
 }
 
-.text-btn-container[b-m1n89xd0az] {
+.days_styling[b-vmktas2ncg] {
+  margin-left: auto;
+}
+
+.text-btn-container[b-vmktas2ncg] {
   background-color: white;
 }
 
-.buisness-name-hashtag[b-m1n89xd0az] {
-  background-color: rgb(255, 255, 255, 0.3);
-  margin: 10px;
-  padding: 8px 8px;
-  text-align: center;
-  border-radius: 40px;
-  font-size: 13px;
-}
-
-.initial[b-m1n89xd0az] {
+.initial[b-vmktas2ncg] {
   color: white;
 }
-/* _content/NashGrub/Views/Shared/_Layout.cshtml.rz.scp.css */
-/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
