@@ -27,7 +27,7 @@
                 <p class="review-date">@(review.DaysSincePosted)d</p>
             </li>
         }
-        @foreach (Review review in Model.Reviews)
+        @* @foreach (Review review in Model.Reviews)
         {
             <li class="review-item">
                 <div class="business-icon-background">
@@ -39,7 +39,7 @@
                 </div>
                 <p class="review-date">@(review.DaysSincePosted)d</p>
             </li>
-        }
+        } *@
     </ul>
 </div>
 @* make this the aside content *@
@@ -48,7 +48,7 @@
         @foreach (Hashtag hashtag in Model.Hashtags)
         {
             <li class="hashtag-item">
-                <p class="hashtag">#@hashtag.BusinessName.ToLower()</p>
+                <a class="hashtag" href="?hashtag=@hashtag.BusinessName">#@hashtag.BusinessName.ToLower()</a>
             </li>
         }
     </ul>

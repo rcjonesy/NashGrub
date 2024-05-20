@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NashGrub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f3d9525473eda8070278e4bba84e9821755d5a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61198cfd04f168f10dbffe0bf8f05fd40a36e197")]
 [assembly: System.Reflection.AssemblyProductAttribute("NashGrub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NashGrub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

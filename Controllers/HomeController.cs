@@ -6,15 +6,10 @@ using NashGrub.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
 
-
-
-
-
 namespace NashGrub.Controllers;
 
 public class HomeController : Controller
 {
-
     private readonly NashGrubDbContext _context;
 
     public HomeController(NashGrubDbContext context)
@@ -22,13 +17,28 @@ public class HomeController : Controller
         _context = context;
     }
 
-    public ActionResult Index()
+    public ActionResult Index(string? hashtag)
     {
+        Hashtag? foundHashtag;
         List<Hashtag> hashtags = _context.Hashtags.ToList();
+        List<Review> reviews = new();
 
-        List<Review> reviews = _context.Reviews
-        .Include(reviews => reviews.Hashtag)
-        .ToList();
+        if (hashtag != null)
+        {
+            foundHashtag = _context.Hashtags.FirstOrDefault((h) => h.BusinessName == hashtag);
+
+            if (foundHashtag != null)
+            {
+                reviews = _context.Reviews.Include((review) => review.Hashtag).Where((review) => review.HashtagId == foundHashtag.Id).ToList();
+            }
+        }
+
+        if (hashtag == null)
+        {
+            reviews = _context.Reviews
+            .Include(reviews => reviews.Hashtag)
+            .ToList();
+        }
 
         HashtagsReviewsDTO hashtagsReviews = new HashtagsReviewsDTO
         {
@@ -36,23 +46,27 @@ public class HomeController : Controller
             Reviews = reviews
         };
 
-        Console.WriteLine(hashtagsReviews);
-
-
         return View(hashtagsReviews);
-
-
     }
+
     [HttpPost]
     public ActionResult Index(HashtagsReviewsDTO hashtagsReviews)
     {
-        // pattern to check hashtag
-        string pattern = @"#(\w+) ";
         // original message
-        string? message = hashtagsReviews.Review?.Message.ToLower();
+        string? message = hashtagsReviews.Review?.Message?.ToLower();
+
+        // pattern to check hashtag
+        string pattern = @"#(\w+)";
+
+        // need to change this because it is not doing anything
+        if (message == null)
+        {
+            return View("Index");
+        }
+
         // extracted hashtag
-        string hashtagWithHash = Regex.Match(hashtagsReviews.Review.Message, pattern).Value;
-        string hashtag = Regex.Replace(hashtagWithHash, "#", "");
+        string hashtagWithHash = Regex.Match(message, pattern).Value;
+        string hashtag = Regex.Replace(hashtagWithHash, "#", "").Trim().ToLower();
 
         Review newReviewObj = new()
         {
@@ -66,6 +80,6 @@ public class HomeController : Controller
 
         _context.Add(newReviewObj);
         _context.SaveChanges();
-        return RedirectToAction("Index");
+        return RedirectToAction();
     }
 }
