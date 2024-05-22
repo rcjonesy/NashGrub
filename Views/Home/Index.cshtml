@@ -1,8 +1,10 @@
 ﻿@model NashGrub.Models.DTOs.HashtagsReviewsDTO
 
 <div class="main-content">
-    <div class="main-content-header"> @* this div is used for padding if needed *@
-        <h1 class="heading">NASH<span class="heading-span">grub</span></h1>
+    <div class="main-content-header">
+        <h1 class="heading">
+            <a class="heading-h1" href="/">NASH<span class="heading-span">grub</span></a>
+        </h1>
         <p class="slogan">Feedback for Food.</p>
         <form asp-action="Index" class="form-content">
             <div class="form-layout">
@@ -27,19 +29,6 @@
                 <p class="review-date">@(review.DaysSincePosted)d</p>
             </li>
         }
-        @* @foreach (Review review in Model.Reviews)
-        {
-            <li class="review-item">
-                <div class="business-icon-background">
-                    <p class="business-icon">@review.Hashtag.BusinessName.Substring(0, 1)</p>
-                </div>
-                <div class="review-detail">
-                    <p class="review-business-name">@review.Hashtag.BusinessName.ToUpper()</p>
-                    <p class="review-description">@review.Message</p>
-                </div>
-                <p class="review-date">@(review.DaysSincePosted)d</p>
-            </li>
-        } *@
     </ul>
 </div>
 @* make this the aside content *@

@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using NashGrub.Models;
 using NashGrub.Models.DTOs;
@@ -20,8 +19,8 @@ public class HomeController : Controller
     public ActionResult Index(string? hashtag)
     {
         Hashtag? foundHashtag;
-        List<Hashtag> hashtags = _context.Hashtags.ToList();
-        List<Review> reviews = new();
+        List<Hashtag> hashtags = [.. _context.Hashtags];
+        List<Review> reviews = [];
 
         if (hashtag != null)
         {
@@ -29,7 +28,7 @@ public class HomeController : Controller
 
             if (foundHashtag != null)
             {
-                reviews = _context.Reviews.Include((review) => review.Hashtag).Where((review) => review.HashtagId == foundHashtag.Id).ToList();
+                reviews = _context.Reviews.Include((review) => review.Hashtag).Where((review) => review.HashtagId == foundHashtag.Id).OrderByDescending((review) => review.DateCreated).ToList();
             }
         }
 
@@ -37,6 +36,7 @@ public class HomeController : Controller
         {
             reviews = _context.Reviews
             .Include(reviews => reviews.Hashtag)
+            .OrderByDescending((review) => review.DateCreated)
             .ToList();
         }
 
@@ -50,36 +50,55 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public ActionResult Index(HashtagsReviewsDTO hashtagsReviews)
+    public ActionResult Index(HashtagsReviewsDTO hashtagsReview)
     {
+        // need to change this because it is not doing anything
+        if (hashtagsReview.Review.Message == null)
+        {
+            return RedirectToAction();
+        }
         // original message
-        string? message = hashtagsReviews.Review?.Message?.ToLower();
+        string? message = hashtagsReview.Review?.Message?.ToLower();
 
         // pattern to check hashtag
         string pattern = @"#(\w+)";
 
-        // need to change this because it is not doing anything
-        if (message == null)
-        {
-            return View("Index");
-        }
 
         // extracted hashtag
         string hashtagWithHash = Regex.Match(message, pattern).Value;
         string hashtag = Regex.Replace(hashtagWithHash, "#", "").Trim().ToLower();
 
-        Review newReviewObj = new()
-        {
-            DateCreated = DateTime.Now,
-            Message = message,
-            Hashtag = new()
-            {
-                BusinessName = hashtag.ToLower()
-            }
-        };
+        Hashtag? findHashtag = _context.Hashtags.FirstOrDefault((h) => h.BusinessName == hashtag);
 
-        _context.Add(newReviewObj);
-        _context.SaveChanges();
+        if (findHashtag != null)
+        {
+            Review newReviewObj = new()
+            {
+                DateCreated = DateTime.Now,
+                Message = message,
+                Hashtag = findHashtag
+            };
+
+            _context.Add(newReviewObj);
+            _context.SaveChanges();
+        }
+
+        if (findHashtag == null)
+        {
+            Review newReviewObj = new()
+            {
+                DateCreated = DateTime.Now,
+                Message = message,
+                Hashtag = new()
+                {
+                    BusinessName = hashtag.ToLower()
+                }
+            };
+
+            _context.Add(newReviewObj);
+            _context.SaveChanges();
+        }
+
         return RedirectToAction();
     }
 }
